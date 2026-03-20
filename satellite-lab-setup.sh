@@ -19,12 +19,6 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 ts="$(date +%Y%m%d%H%M%S)"
-LOG_FILE="/tmp/satellite-lab-setup-${ts}.log"
-
-# Redirect all output to log file and console
-exec > >(tee -a "$LOG_FILE") 2>&1
-printf 'Logging to: %s\n\n' "$LOG_FILE"
-
 backup="${SSHD_CONFIG}.bak.${ts}"
 
 cp -p "$SSHD_CONFIG" "$backup"
