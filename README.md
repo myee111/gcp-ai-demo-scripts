@@ -81,6 +81,7 @@ sudo HOSTS_SATELLITE_IP=192.168.1.100 \
 ### Backups
 
 Creates timestamped backups before modifying files:
+
 - `/etc/ssh/sshd_config.bak.YYYYMMDDHHMMSS`
 - `/etc/hosts.bak.YYYYMMDDHHMMSS`
 
