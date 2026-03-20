@@ -37,4 +37,5 @@ fi
 chmod +x "$TEMP_SCRIPT"
 
 printf 'Running %s...\n\n' "$SCRIPT_NAME"
+cd /tmp
 exec "$TEMP_SCRIPT" "$@"

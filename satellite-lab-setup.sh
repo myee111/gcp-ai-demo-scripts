@@ -4,6 +4,8 @@
 
 set -eu
 
+cd /tmp
+
 SSHD_CONFIG="${SSHD_CONFIG:-/etc/ssh/sshd_config}"
 
 if [ ! -f "$SSHD_CONFIG" ]; then
