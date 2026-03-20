@@ -13,6 +13,12 @@ if [ "$(id -u)" -ne 0 ]; then
   exec sudo "$0" "$@"
 fi
 
+# Setup logging
+ts="$(date +%Y%m%d%H%M%S)"
+LOG_FILE="/tmp/install-satellite-lab-${ts}.log"
+exec > >(tee -a "$LOG_FILE") 2>&1
+printf 'Logging to: %s\n\n' "$LOG_FILE"
+
 printf 'Downloading %s from GitHub...\n' "$SCRIPT_NAME"
 
 if command -v curl >/dev/null 2>&1; then

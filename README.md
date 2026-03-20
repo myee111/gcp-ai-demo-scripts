@@ -84,6 +84,10 @@ Creates timestamped backups before modifying files:
 - `/etc/ssh/sshd_config.bak.YYYYMMDDHHMMSS`
 - `/etc/hosts.bak.YYYYMMDDHHMMSS`
 
+### Logging
+
+All output (stdout and stderr) is automatically logged to `/tmp/satellite-lab-setup-YYYYMMDDHHMMSS.log`. The log file path is displayed at the start of execution. Logs are preserved in `/tmp` for troubleshooting.
+
 ### Requirements
 
 - Root access
@@ -97,9 +101,14 @@ Bootstrap installer that downloads and runs the latest `satellite-lab-setup.sh` 
 ### How it works
 
 1. Checks for root access (auto-elevates with sudo if needed)
-2. Downloads the latest `satellite-lab-setup.sh` from the main branch
-3. Makes it executable and runs it
-4. Supports both curl and wget
+2. Sets up logging to `/tmp/install-satellite-lab-YYYYMMDDHHMMSS.log`
+3. Downloads the latest `satellite-lab-setup.sh` from the main branch
+4. Makes it executable and runs it in `/tmp`
+5. Supports both curl and wget
+
+### Logging
+
+All download and execution output is logged to `/tmp/install-satellite-lab-YYYYMMDDHHMMSS.log`. The downloaded `satellite-lab-setup.sh` creates its own log file as well, so you'll have two log files for a complete audit trail.
 
 ### How to run
 
