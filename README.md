@@ -104,7 +104,7 @@ Bootstrap installer that downloads and runs the latest `satellite-lab-setup.sh` 
 
 ### Logging
 
-All download and execution output is logged to `/tmp/install-satellite-lab-YYYYMMDDHHMMSS.log`. The downloaded `satellite-lab-setup.sh` creates its own log file as well, so you'll have two log files for a complete audit trail.
+All installer output is logged to `/tmp/install-satellite-lab-YYYYMMDDHHMMSS.log`. This includes the download process and execution of the setup script.
 
 ### How to run
 
