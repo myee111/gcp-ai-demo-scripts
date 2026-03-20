@@ -115,12 +115,13 @@ All download and execution output is logged to `/tmp/install-satellite-lab-YYYYM
 **One-liner (recommended):**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/myee111/gcp-ai-demo-scripts/main/install-satellite-lab.sh | sudo bash
+cd /tmp && curl -fsSL https://raw.githubusercontent.com/myee111/gcp-ai-demo-scripts/main/install-satellite-lab.sh | sudo bash
 ```
 
 **Or download first:**
 
 ```bash
+cd /tmp
 curl -fsSL -o install-satellite-lab.sh https://raw.githubusercontent.com/myee111/bash-scripting/main/install-satellite-lab.sh
 chmod +x install-satellite-lab.sh
 sudo ./install-satellite-lab.sh
@@ -129,7 +130,7 @@ sudo ./install-satellite-lab.sh
 **With environment variables:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/myee111/bash-scripting/main/install-satellite-lab.sh | \
+cd /tmp && curl -fsSL https://raw.githubusercontent.com/myee111/bash-scripting/main/install-satellite-lab.sh | \
   sudo HOSTS_SATELLITE_IP=192.168.1.100 SATELLITE_ACTIVATION_KEYS=prod bash
 ```
 
