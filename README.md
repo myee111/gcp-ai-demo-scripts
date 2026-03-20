@@ -84,10 +84,6 @@ Creates timestamped backups before modifying files:
 - `/etc/ssh/sshd_config.bak.YYYYMMDDHHMMSS`
 - `/etc/hosts.bak.YYYYMMDDHHMMSS`
 
-### Logging
-
-All output (stdout and stderr) is automatically logged to `/tmp/satellite-lab-setup-YYYYMMDDHHMMSS.log`. The log file path is displayed at the start of execution. Logs are preserved in `/tmp` for troubleshooting.
-
 ### Requirements
 
 - Root access
